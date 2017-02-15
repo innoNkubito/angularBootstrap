@@ -1,0 +1,14 @@
+{
+  "name": "angular",
+  "version": "0.0.1",
+  "description": "Angular JS app exhibiting view based structure and using bootstrap.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "InnoTheMaverick",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
