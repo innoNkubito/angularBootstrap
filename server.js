@@ -8,4 +8,6 @@ var app = express();
 app.use(express.static('app'));
 
 //start the server
-app.listen(3000,function(){});
+app.listen(3000,function(){
+	console.log("Running on HTTP port 3000");
+});

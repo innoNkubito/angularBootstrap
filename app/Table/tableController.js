@@ -1,46 +1,22 @@
-angular.module("tableModule").controller("tableController",function($scope){
+angular.module("tableModule").controller("tableController",function($scope,tableService,dataFactory){
+
+	$scope.newBranch = {};
 
 
-	$scope.protekBranches = [
+	tableService.protekData().success(function(response){
 
-	{state: "CA", city: "Fremont"},
+		$scope.protekBranches = response.data;
 
-	{state: "CA", city: "San Jose"},
+	});
 
-	{state: "CA", city: "San Francisco"},
-
-	{state: "CA", city: "Los Angeles"},
-
-	{state: "IL", city: "Chicago"}
-
-	];
-
-	$scope.stat = '';
-	$scope.cit = '';
-
-
-	document.getElementById("add").addEventListener('click', function() {
-    $scope.$apply(function() {
-        $scope.stat = prompt("State");
-        $scope.cit = prompt("City");
-
-        if( $scope.stat !='' &&  $scope.city != '')
-        {
-        	 $scope.protekBranches.push({state: $scope.stat, city: $scope.cit});
-        }
-        else{
-        	alert("Invalid input");
-        }
-
-       
-
-    });
-
-    
-});
 
 	$scope.removeBranch = function(index){
 		$scope.protekBranches.splice(index,1);
+	}
+
+	$scope.addBranch = function(){
+		$scope.protekBranches.push($scope.newBranch);
+		$scope.newBranch= {};
 	}
 
 

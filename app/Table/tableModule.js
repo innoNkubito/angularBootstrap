@@ -1,1 +1,1 @@
-angular.module("tableModule",['ngMaterial','ngMessages']);
+angular.module("tableModule",[]);

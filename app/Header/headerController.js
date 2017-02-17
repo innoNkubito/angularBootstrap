@@ -1,4 +1,4 @@
-angular.module("headerModule").controller("headerController", function($scope){
+angular.module("headerModule").controller("headerController", function($scope,tableService,dataFactory){
 
-	$scope.navlinks = ["Home", "Contact", "Services", "Visit" ];
+	$scope.navlinks = dataFactory.navData;
 })

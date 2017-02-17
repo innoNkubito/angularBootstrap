@@ -1,5 +1,15 @@
 <div ng-controller="tableController">
-	<table class="table table-hover table-condensed" >
+
+	<div class="panel panel-default">
+  <!-- Default panel contents -->
+  	<div class="panel-heading">Protek Branches</div>
+  	<div class="panel-body">
+    	<p>A LIST OF PROTEK BRANCHES ACROSS THE U.S.A</p>
+  	</div>
+
+  <!-- Table -->
+  	<table class="table">
+    	<table class="table table-hover table-condensed" >
 
 		<tr>
 
@@ -15,7 +25,7 @@
 			<td>{{branch.city}}</td>
 			<td>
 
-				<button class="btn btn-danger">Edit</button>
+				<button class="btn btn-primary">Edit</button>
 
 				<button class="btn btn-danger" ng-click="removeBranch($index)">Delete</button>
 			</td>
@@ -25,5 +35,48 @@
 
 	</table>
 
-	<button class="btn btn-primary" id="add">Add Branch</button>
+
+	</div>
+
+
+
+
+
+	
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myBranch">
+		  Add Branch
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myBranch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Add Branch</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <form>
+					  <div class="form-group">
+					    <label for="stateInput">State</label>
+					    <input type="text" class="form-control" ng-model="newBranch.state" id="stateInput" placeholder="State name">
+					  </div>
+					  <div class="form-group">
+					    <label for="cityInput">City</label>
+					    <input type="text" class="form-control" ng-model="newBranch.city" id="cityInput" placeholder="City Name">
+					  </div>
+					  
+					</form>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" ng-click="addBranch()" data-dismiss="modal">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 </div>
