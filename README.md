@@ -1,5 +1,6 @@
 # angularBootstrap
-A simple Angular JS app styled using Bootstrap
+#A simple Angular JS app styled using Bootstrap
+
 1. Still working on utilizing $http with a custom service to fetch json file from a database
 
 2. For now I'm doing an ajax call to fetch the json file from the controller (Bad practice but it works)
