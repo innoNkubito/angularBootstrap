@@ -1,12 +1,10 @@
-angular.module("tableModule").controller("tableController",function($scope,tableService,dataFactory){
+angular.module("tableModule").controller("tableController",function($scope,tableService, $http, dataFactory){
 
 	$scope.newBranch = {};
 
 
-	tableService.protekData().success(function(response){
-
-		$scope.protekBranches = response.data;
-
+	$http.get('/Table/myDb.json').then(function(response){
+			$scope.protekBranches = response.data.protekBranchez;
 	});
 
 
