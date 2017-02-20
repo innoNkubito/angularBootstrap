@@ -1,4 +1,4 @@
-angular.module("tableModule").factory("dataFactory", function(){
+angular.module("tableModule").factory("dataFactory", function($http){
    
    var factory = {};
 
