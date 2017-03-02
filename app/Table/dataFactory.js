@@ -1,13 +1,28 @@
-angular.module("tableModule").factory("dataFactory", function($http){
+angular.module("tableModule").factory("dataFactory", function($http,$q){
    
    var factory = {};
 
+   factory.navData = ["Home", "Contact", "Services", "Visit" ];
 
-	factory.protekData= $http.get("/Table/myDB.json").then(function(response){
-		 return response.data;
-	});
+	factory.getdata = function(){
+		var deferred = $q.defer();
 
-	factory.navData = ["Home", "Contact", "Services", "Visit" ];
+		$http({
+			method: 'GET',
+			url: '/Table/myDB.json'
+		}).success(function(response){
+			//factory.protekData = response.data;
+			deferred.resolve(response);
+
+		}).error(function(error){
+
+			deferred.reject(error);
+		});
+
+		return deferred.promise;
+	}
+
+	
 
 
 	return factory;

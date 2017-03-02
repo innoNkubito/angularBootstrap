@@ -1,16 +1,28 @@
-
-
 {
-	"protekBranchez" : [
-		{"state": "CA", "city": "Fremont"},
+	"protekBranchez": [{
+			"state": "CA",
+			"city": "Fremont"
+		},
 
-		{"state": "CA", "city": "San Jose"},
+		{
+			"state": "CA",
+			"city": "San Jose"
+		},
 
-		{"state": "CA", "city": "San Francisco"},
+		{
+			"state": "CA",
+			"city": "San Francisco"
+		},
 
-		{"state": "CA", "city": "Los Angeles"},
+		{
+			"state": "CA",
+			"city": "Los Angeles"
+		},
 
-		{"state": "IL", "city": "Chicago"}
+		{
+			"state": "IL",
+			"city": "Chicago"
+		}
 
 	]
 }
