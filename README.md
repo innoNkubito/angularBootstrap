@@ -1,13 +1,15 @@
 # angularBootstrap
-#A simple Angular JS app styled using Bootstrap
+#A simple "CRUD" Angular JS web App
 
 1. To run this project; you'll need to install a node js server if you are using sublime text. It runs on HTTP port 3000.(See server.js)
 
-2. Still working on utilizing $http with a custom service/factory to fetch json file from a database.
+2. Page is styled using Twitter Bootstrap.
 
-3. For now I'm doing an ajax call from the controller to fetch the json file.(Bad practice but it works)
+3. Create/Delete functionality is implemented using AngularJS.
 
-4.  Edit button functionality not implemented yet.
+5. Data is fetched from JSON file using a factory. Note: I will eventually query that data from a database.
+
+4.  Edit functionality not implemented yet.
 
 ~I.N
 
